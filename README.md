@@ -1,6 +1,6 @@
 # OpusSoftware-Internship-AWS-Studies-and-Project
 
-PRojeto
+Esse repositório contém todo o conteúdo de estudo e projeto prático feito para o programa de Estágiários em Cloud Computing da Opus Software. A seguir, o conteúdo teórico pesquisado resumido em tópicos para posterior apresentação e nas pastas podem ser encontrados o projeto e a apresentação de slides.
 
 - Referências:
     - [https://www.alura.com.br/artigos/cloud](https://www.alura.com.br/artigos/cloud)
