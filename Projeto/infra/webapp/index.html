@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Receber registro do banco de dados</title>
+  </head>
+  <body>
+    <center>
+        <h1>Recebe logo da Opus hospedado num S3 publico</h1>
+        <div id="logoOpus"><img src= "https://public-opus-matheus-silva-webapp.s3.us-west-2.amazonaws.com/opuslogo.png"></div>
+        <h1>Receber registro do banco de dados</h1>
+        <button id="getRegistro">Obter registro</button>
+        <div id="registroJson"></div>
+    </center>
+  </body>
+<script>
+        const getRegistroButton = document.querySelector('#getRegistro');
+        const registroJson = document.querySelector('#registroJson');
+
+        getRegistroButton.addEventListener('click', () => {
+            fetch("http://35.164.156.132:80/registro")
+                .then(response => response.text())
+                    .then(data => {
+                        console.log(data);
+                        registroJson.textContent = data;
+                    })
+                    .catch(error => {
+                        console.error('Erro ao receber registro:', error);
+                    });
+        });
+    </script>
+</html>

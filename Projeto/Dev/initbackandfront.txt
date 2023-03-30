@@ -1,0 +1,23 @@
+frontend
+# sudo mkdir webapp
+# cd webapp
+# sudo apt update
+# sudo apt install awscli -y
+# sudo aws s3 cp s3://opus-matheus-silva-webapp/frontend.js ./frontend.js
+# sudo aws s3 cp s3://opus-matheus-silva-webapp/index.html ./index.html
+# sudo apt install nodejs -y
+# sudo apt install npm -y
+# sudo npm i
+
+backend
+sudo apt update
+sudo apt install awscli -y
+sudo aws s3 cp s3://opus-matheus-silva-webapp/backend.js backend.js
+sudo apt install nodejs -y
+sudo apt install npm -y
+sudo apt install mysql-client-core-8.0
+sudo npm i
+sudo npm install express
+sudo npm install mysql2
+sudo npm install aws-sdk
+sudo npm install cors
