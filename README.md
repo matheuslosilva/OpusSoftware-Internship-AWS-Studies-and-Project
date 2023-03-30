@@ -28,7 +28,7 @@ Esse repositório contém todo o conteúdo de estudo e projeto prático feito pa
         - IBM:
             - **Grid computing:** Solving large problems with parallel computing
             - **Utility computing:** Offering computing resources as a metered service
-            - **[SaaS](https://www.ibm.com/cloud/learn/iaas-paas-saas):** Network-based subscriptions to applications
+            - **SaaS:** Network-based subscriptions to applications
             - **Cloud computing:** Anytime, anywhere access to IT resources delivered dynamically as a service
     - Conceito
         - NIST
@@ -131,31 +131,31 @@ Esse repositório contém todo o conteúdo de estudo e projeto prático feito pa
         - Entendendo a importância da cobrança pelos recursos da AWS e como usá-los corretamente.
         
         - AWS Networking Services
-            - [Virtual Private Cloud](https://jayendrapatil.com/aws-virtual-private-cloud-vpc/)
+            - Virtual Private Cloud
                 - VPC – Regional
                     - VPCs are created within a region
                 - Subnet – **Availability Zone**
                     - A subnet can span only a single Availability Zone
                 - Security groups – Regional
                     - A security group is tied to a region and can be assigned only to instances in the same region.
-                - [VPC Endpoints](https://jayendrapatil.com/aws-vpc-endpoints/) – Regional
+                - VPC Endpoints – Regional
                     - VPC Gateway & Interface Endpoints cannot be created between a VPC and an AWS service in a different region.
-                - [VPC Peering](https://jayendrapatil.com/aws-vpc-peering/) – ~~Regional~~
+                - VPC Peering – ~~Regional~~
                     - VPC Peering can be performed across VPC in the same account of different AWS accounts ~~but only within the same region. They cannot span across regions~~
                     - VPC Peering can now span inter-region
                 - Elastic IP Address – Regional
                     - Elastic IP addresses created within the region can be assigned to instances within the region only.
                 - Elastic Network Interface – Availability Zone
-                - [Route 53](https://jayendrapatil.com/aws-route-53/) – **Global**
+                - Route 53 – **Global**
                     - Route53 services are offered at AWS edge locations and are global
-                - [CloudFront](https://jayendrapatil.com/aws-cloudfront/) – **Global**
+                - CloudFront – **Global**
                     - CloudFront is the global content delivery network (CDN) services are offered at AWS edge locations
-                - ELB, [ALB](https://jayendrapatil.com/aws-elb-application-load-balancer/), [NLB](https://jayendrapatil.com/aws-elb-network-load-balancer/), [GWLB](https://jayendrapatil.com/aws-gateway-load-balancer-gwlb/) – Regional
+                - ELB, ALB, NLB, GWLB – Regional
                     - Elastic Load Balancer distributes traffic across instances in multiple Availability Zones in the same region
                     - Use Route 53 to route traffic to load balancers across regions.
-                - [Direct Connect Gateway](https://jayendrapatil.com/aws-direct-connect-gateway/) – Global
+                - Direct Connect Gateway – Global
                     - is a globally available resource that can be created in any Region and accessed from all other Regions.
-                - [Transit Gateway](https://jayendrapatil.com/aws-transit-gateway-tgw/) – Regional
+                - Transit Gateway – Regional
                     - is a Regional resource and can connect VPCs within the same AWS Region.
                     - Transit Gateway Peering can be used to attach TGWs across regions.
                 - AWS Global Accelerator – Global
@@ -163,7 +163,7 @@ Esse repositório contém todo o conteúdo de estudo e projeto prático feito pa
                 
                 # AWS Compute Services
                 
-                - [EC2](https://jayendrapatil.com/aws-ec2-overview/)
+                - EC2
                     - Resource Identifiers – Regional
                         - Each resource identifier, such as an AMI ID, instance ID, EBS volume ID, or EBS snapshot ID, is tied to its region and can be used only in the region where you created the resource.
                     - Instances – **Availability Zone**
@@ -177,45 +177,45 @@ Esse repositório contém todo o conteúdo de estudo e projeto prático feito pa
                         - AMI is tied to the Region where its files are located with Amazon S3. For using AMI in different regions, the AMI can be copied to other regions
                     - Auto Scaling – Regional
                         - Auto Scaling spans across multiple Availability Zones within the same region but cannot span across regions
-                - [Cluster Placement Groups](https://jayendrapatil.com/aws-ec2-placement-groups/#Cluster_Placement_Groups) – **Availability Zone**
+                - Cluster Placement Groups – **Availability Zone**
                     - Cluster Placement groups can span across Instances within the same Availability Zones
-                - [ECS](https://jayendrapatil.com/aws-ec2-container-service-ecs/) – Regional
+                - ECS – Regional
                 
                 # AWS Storage Services
                 
-                - [S3](https://jayendrapatil.com/aws-simple-storage-service-s3-overview/) – Global but Data is Regional
+                - S3 – Global but Data is Regional
                     - S3 buckets are created within the selected region
                     - Objects stored are replicated across Availability Zones to provide high durability but are not cross-region replicated unless done explicitly.
                     - S3 cross-region replication can be used to replicate data across regions.
-                - [DynamoDB](https://jayendrapatil.com/aws-dynamodb-security/) – Regional
+                - DynamoDB – Regional
                     - All data objects are stored within the same region and replicated across multiple Availability Zones in the same region
                     - Data objects can be explicitly replicated across regions using cross-region replication
-                - [DynamoDB Global Tables](https://jayendrapatil.com/aws-dynamodb-advanced/) – Across Regions
+                - DynameDB Global Tables – Across Regions
                     - is a new **multi-master, cross-region replication** capability of DynamoDB to support data access locality and regional fault tolerance for database workloads
-                - [Storage Gateway](https://jayendrapatil.com/aws-storage-gateway/) – Regional
+                - Storage Gateway – Regional
                     - AWS Storage Gateway stores volume, snapshot, and tape data in the AWS region in which the gateway is activated
                 
                 # AWS Identity & Security Services
                 
-                - [Identity Access Management – IAM](https://jayendrapatil.com/aws-iam-overview/)
+                - Identity Access Management – IAM
                     - Users, Groups, Roles, Accounts – **Global**
                         - Same AWS accounts, users, groups, and roles can be used in all regions
                     - Key Pairs – **Global** or Regional
                         - EC2 created key pairs are specific to the region
                         - RSA key pair can be created and uploaded that can be used in all regions
-                - [Web Access Firewall – WAF](https://jayendrapatil.com/aws-waf/) – **Global**
+                - Web Access Firewall – WAF – **Global**
                     - protect web applications from common web exploits and is offered at AWS edge locations globally.
-                - [AWS Config](https://jayendrapatil.com/aws-config/) – Regional
-                - [AWS GuardDuty](https://jayendrapatil.com/amazon-guardduty/) – Regional
+                - AWS Config – Regional
+                - AWS GuardDuty – Regional
                     - findings remain in the same Regions where the underlying data was generated.
-                - [Amazon Detective](https://jayendrapatil.com/amazon-detective/) – Regional
-                - [Amazon Inspector](https://jayendrapatil.com/amazon-inspector/) – Regional
-                - [Amazon Macie](https://jayendrapatil.com/aws-macie/) – Regional
+                - Amazon Detective – Regional
+                - Amazon Inspector – Regional
+                - Amazon Macie – Regional
                     - must be enabled on a region-by-region basis and helps view findings across all the accounts within each Region.
                     - verifies that all data analyzed is regionally based and doesn’t cross AWS regional boundaries.
-                - [AWS Security Hub](https://jayendrapatil.com/aws-security-hub/) – Regional.
+                - AWS Security Hub – Regional.
                     - supports cross-region aggregation of findings via the designation of an aggregator region.
-                - [AWS Migration Hub](https://jayendrapatil.com/aws-migration-hub/) – Regional.
+                - AWS Migration Hub – Regional.
                     - runs in a single home region, however, can collect data from all regions
         - A escolha da região a se trabalhar é muito importante por alguns fatores:
             - Compliance, ou seja, adequação as normas governamentais ou institucionais do seu país e/ou aplicação;
@@ -262,7 +262,6 @@ Esse repositório contém todo o conteúdo de estudo e projeto prático feito pa
             - Para ter acesso a conta com MFA, então, o usuário deve saber a sua senha e autenticar seu dispositivo no momento do login.
             - Existem aplicativos de terceiros que permitem a geração de keys para a autenticação como Google authenticator ou Authy, por exemplo. Também é possível adquirir um hardware físico para que seja feita a autenticação.
             - O MFA é ativado pelo próprio usuário, no entanto é possível garantir que todos os usuários de uma conta ativem o seu MFA
-            - [https://docs.aws.amazon.com/singlesignon/latest/userguide/how-to-configure-mfa-device-enforcement.html](https://docs.aws.amazon.com/singlesignon/latest/userguide/how-to-configure-mfa-device-enforcement.html)
         - IAM-identity-center
             - Como sucessor do aws SSO, o IIS tem como objetivo centralizar a gestão de usuários de uma organização num único serviço.
             - Nele é possível administrar permissões e restrições para os usuários de uma mesma conta, bem como impor regras para o acesso a cloud.
